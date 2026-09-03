@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraminSwasthya AI - Rural Healthcare & Early Risk Detection Platform</title>
+  <meta name="description" content="AI-assisted rural healthcare system providing symptom risk assessment, medical scan abnormality detection, multilingual health assistance, doctor tele-triage, and emergency response for rural communities." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="theme-light">
+  <div id="app">
+    <!-- Top Emergency Banner (Visible or triggered dynamically) -->
+    <div id="emergency-banner" class="emergency-banner hidden" role="alert">
+      <div class="banner-content">
+        <span class="banner-icon">🚨</span>
+        <span class="banner-text" id="emergency-banner-text">High-Risk Alert Detected! Immediate Medical Attention Advised.</span>
+      </div>
+      <div class="banner-actions">
+        <button id="banner-call-108-btn" class="btn btn-emergency btn-sm">
+          📞 Call 108 Emergency
+        </button>
+        <button id="banner-view-phc-btn" class="btn btn-outline-light btn-sm">
+          🏥 Nearest PHC
+        </button>
+        <button id="banner-dismiss-btn" class="banner-close" aria-label="Dismiss banner">✕</button>
+      </div>
+    </div>
+
+    <!-- Application Header -->
+    <header id="app-header" class="app-header"></header>
+
+    <!-- Navigation Tabs -->
+    <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+      <div class="nav-container">
+        <button class="nav-tab kiosk-tab-highlight active" data-tab="medikiosk">
+          <span class="tab-icon">🏥</span>
+          <span class="tab-label" data-i18n="nav_medikiosk">MediKiosk (AI Intake)</span>
+          <span class="badge" style="background:#ecfdf5; color:#047857; font-size:0.68rem; font-weight:800;">ABDM</span>
+        </button>
+        <button class="nav-tab" data-tab="symptoms">
+          <span class="tab-icon">🩺</span>
+          <span class="tab-label" data-i18n="nav_symptoms">Symptom Checker</span>
+        </button>
+        <button class="nav-tab" data-tab="reports">
+          <span class="tab-icon">🔬</span>
+          <span class="tab-label" data-i18n="nav_reports">Scan & Report AI</span>
+        </button>
+        <button class="nav-tab" data-tab="chatbot">
+          <span class="tab-icon">💬</span>
+          <span class="tab-label" data-i18n="nav_chatbot">AI Health Chatbot</span>
+        </button>
+        <button class="nav-tab" data-tab="appointments">
+          <span class="tab-icon">📅</span>
+          <span class="tab-label" data-i18n="nav_appointments">Doctor Appointments</span>
+        </button>
+        <button class="nav-tab doctor-tab-highlight" data-tab="doctor">
+          <span class="tab-icon">👨‍⚕️</span>
+          <span class="tab-label" data-i18n="nav_doctor">Doctor Dashboard</span>
+          <span class="badge badge-risk-high" id="high-risk-badge">3 Alert</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content">
+      <!-- Section: MediKiosk Autonomous AI Clinical Intake -->
+      <section id="tab-medikiosk" class="tab-pane active"></section>
+
+      <!-- Section: Symptom Checker & Risk Assessment -->
+      <section id="tab-symptoms" class="tab-pane"></section>
+
+      <!-- Section: Report & Scan Analysis -->
+      <section id="tab-reports" class="tab-pane"></section>
+
+      <!-- Section: Multilingual Chatbot & Voice Assistant -->
+      <section id="tab-chatbot" class="tab-pane"></section>
+
+      <!-- Section: Appointment & Teleconsultation -->
+      <section id="tab-appointments" class="tab-pane"></section>
+
+      <!-- Section: Doctor Tele-Triage Dashboard -->
+      <section id="tab-doctor" class="tab-pane"></section>
+    </main>
+
+    <!-- Global Emergency Modal (Hidden by default) -->
+    <div id="emergency-modal-root"></div>
+
+    <!-- Global Toast Notifications -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- App Footer -->
+    <footer class="app-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">🌿 GraminSwasthya AI</div>
+          <p data-i18n="footer_tagline">Empowering Rural Healthcare & Early Disease Detection across India.</p>
+        </div>
+        <div class="footer-links">
+          <span>🚑 National Emergency: <strong>112</strong></span>
+          <span>🩺 Ambulance / PHC Dispatch: <strong>108</strong></span>
+          <span>👩‍🍼 Mother & Child Helpline: <strong>104</strong></span>
+        </div>
+        <div class="footer-copy">
+          <small>© 2026 AI Rural Healthcare Initiative. Clinical decisions must be confirmed by qualified medical officers.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
