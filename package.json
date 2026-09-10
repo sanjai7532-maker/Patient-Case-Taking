@@ -9,10 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.4.2"
+    "vite": "^5.4.21"
   },
   "dependencies": {
-    "lucide": "^0.439.0",
-    "canvas-confetti": "^1.9.3"
+    "canvas-confetti": "^1.9.3",
+    "lucide": "^0.439.0"
   }
 }
