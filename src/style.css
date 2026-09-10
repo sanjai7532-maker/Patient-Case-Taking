@@ -2336,4 +2336,539 @@ body.theme-dark .sq-option-btn.selected {
   gap: 10px;
 }
 
+/* ===================================================================
+   COMPREHENSIVE RESPONSIVE DESIGN & MEDIA QUERIES
+   Adapts for Desktops, Laptops, Tablets, Mobile Devices, and Print
+   =================================================================== */
+
+/* -------------------------------------------------------------------
+   1. Large Tablets & Small Laptops (<= 1024px)
+   ------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    padding: 20px 18px 56px 18px;
+  }
+
+  .header-container {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .grid-sidebar {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 18px;
+  }
+
+  .kiosk-stepper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .doctor-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .socrates-grid,
+  .ayush-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------------
+   2. Tablets & Mobile Landscape (<= 840px)
+   ------------------------------------------------------------------- */
+@media screen and (max-width: 840px) {
+  .grid-2,
+  .grid-3,
+  .grid-sidebar {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .app-header {
+    padding: 10px 16px;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .brand-titles h1 {
+    font-size: 1.18rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.74rem;
+  }
+
+  .kiosk-top-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .kiosk-header-actions {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .kiosk-stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-node {
+    padding: 10px 12px;
+  }
+
+  .vitals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .sample-scans-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .chat-container {
+    height: calc(100vh - 210px);
+    min-height: 480px;
+  }
+
+  .triage-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .triage-table {
+    min-width: 680px;
+  }
+}
+
+/* -------------------------------------------------------------------
+   3. Mobile Devices & Small Tablets (<= 640px)
+   ------------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  /* Banner */
+  .emergency-banner {
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .banner-content {
+    justify-content: center;
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .banner-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .banner-actions .btn {
+    flex: 1;
+    min-width: 130px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Header */
+  .app-header {
+    position: relative;
+    padding: 10px 12px;
+  }
+
+  .brand-logo-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 1.25rem;
+  }
+
+  .brand-titles h1 {
+    font-size: 1.05rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .header-controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .language-selector {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 2px;
+  }
+
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.74rem;
+  }
+
+  .role-toggle {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .role-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 0.76rem;
+  }
+
+  .btn-emergency-top {
+    font-size: 0.76rem;
+    padding: 6px 10px;
+  }
+
+  /* Navigation Tabs */
+  .main-nav {
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding: 0 4px;
+  }
+
+  .nav-container {
+    padding: 0 4px;
+    gap: 4px;
+  }
+
+  .nav-tab {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
+  .nav-tab .tab-icon {
+    font-size: 1.05rem;
+  }
+
+  .nav-tab .badge {
+    font-size: 0.62rem;
+    padding: 2px 4px;
+  }
+
+  /* Content Area */
+  .main-content {
+    padding: 14px 10px 48px 10px;
+  }
+
+  .page-intro {
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+
+  .page-title {
+    font-size: 1.28rem;
+    gap: 8px;
+  }
+
+  .page-description {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  /* Cards */
+  .card {
+    padding: 14px 12px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Kiosk Component */
+  .kiosk-stepper {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .step-node {
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+  }
+
+  .step-info .step-title {
+    font-size: 0.82rem;
+  }
+
+  .step-info .step-sub {
+    font-size: 0.7rem;
+  }
+
+  .vitals-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .kiosk-nav-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .kiosk-nav-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .time-meter-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Doctor Stats */
+  .doctor-stats-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 12px 14px;
+  }
+
+  /* Symptom Checker */
+  .symptom-tag-cloud {
+    gap: 6px;
+  }
+
+  .symptom-chip {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .risk-meter-card {
+    padding: 18px 12px;
+  }
+
+  /* Chatbot */
+  .chat-container {
+    height: calc(100vh - 180px);
+    min-height: 420px;
+    border-radius: var(--radius-md);
+  }
+
+  .chat-header {
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chat-header-actions {
+    gap: 4px;
+  }
+
+  .chat-messages {
+    padding: 12px 8px;
+  }
+
+  .chat-bubble {
+    max-width: 92%;
+    font-size: 0.84rem;
+    padding: 10px 12px;
+  }
+
+  .chat-input-area {
+    padding: 8px 10px;
+  }
+
+  .chat-input-row {
+    gap: 6px;
+  }
+
+  .chat-input-row input {
+    font-size: 0.84rem;
+    padding: 8px 12px;
+  }
+
+  .chat-input-actions .btn {
+    padding: 8px 10px;
+  }
+
+  /* Modals */
+  .modal-dialog,
+  .emergency-modal-content {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 10px auto !important;
+    padding: 16px 14px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+
+  /* Toast */
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+
+  .toast {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+/* -------------------------------------------------------------------
+   4. Extra Small Devices (<= 380px)
+   ------------------------------------------------------------------- */
+@media screen and (max-width: 380px) {
+  .brand-titles h1 {
+    font-size: 0.95rem;
+  }
+
+  .page-title {
+    font-size: 1.15rem;
+  }
+
+  .btn {
+    font-size: 0.78rem;
+    padding: 7px 12px;
+  }
+
+  .nav-tab {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .lang-btn {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+
+  .symptom-chip {
+    padding: 5px 10px;
+    font-size: 0.74rem;
+  }
+}
+
+/* -------------------------------------------------------------------
+   5. Accessible Motion Preference (Reduced Motion)
+   ------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .emergency-banner {
+    animation: none;
+  }
+
+  .pulse-red,
+  .status-dot-pulse,
+  .kiosk-pulse-indicator {
+    animation: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------
+   6. Print Stylesheet (@media print)
+   Optimizes patient summary, scan reports & prescriptions for print
+   ------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  .emergency-banner,
+  .app-header,
+  .main-nav,
+  .app-footer,
+  .btn,
+  .icon-btn,
+  .chat-input-area,
+  .toast-container,
+  #banner-call-108-btn,
+  .kiosk-nav-footer {
+    display: none !important;
+  }
+
+  .main-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .card {
+    border: 1px solid #cccccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .tab-pane.active {
+    display: block !important;
+  }
+
+  .triage-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .triage-table th,
+  .triage-table td {
+    border: 1px solid #dddddd !important;
+    padding: 6px 8px !important;
+  }
+}
+
+
 
