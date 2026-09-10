@@ -2,8 +2,8 @@ import { defineConfig } from 'vite';
 import https from 'https';
 
 export default defineConfig({
-  // GitHub Pages repository path
-  base: '/Patient-Case-Taking/',
+  // Compatible with Vercel root, GitHub Pages, and local preview
+  base: process.env.GITHUB_PAGES ? '/Patient-Case-Taking/' : './',
 
   // Local development server
   server: {
